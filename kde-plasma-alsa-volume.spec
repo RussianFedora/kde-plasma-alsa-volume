@@ -1,6 +1,6 @@
 Name: kde-plasma-alsa-volume
 Version: 0.38.1
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: ALSA Volume Control plasmoid.
 Summary(ru): Плазмоид для управления ALSA устройствами.
 Group: Applications/Multimedia
@@ -39,6 +39,9 @@ make install DESTDIR=$RPM_BUILD_ROOT/usr
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+
+* Tue Aug 30 2011 Fl@sh <kaperang07@gmail.com> - 0.38.1-4
+- added get source script
 
 * Mon Aug 29 2011 Fl@sh <kaperang07@gmail.com> - 0.38.1-3
 - fixed Makefile
