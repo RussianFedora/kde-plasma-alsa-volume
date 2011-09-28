@@ -1,6 +1,6 @@
 Name: kde-plasma-alsa-volume
 Version: 0.38.1
-Release: 5%{?dist}
+Release: 5%{?dist}.R
 Summary: ALSA Volume Control plasmoid.
 Summary(ru): Плазмоид для управления ALSA устройствами.
 Group: Applications/Multimedia
