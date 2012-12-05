@@ -2,7 +2,7 @@
 
 NAME=kde-plasma-alsa-volume
 GIT_NAME=plasmaVolume
-COMMIT="3724ec33da"
+COMMIT="04dbb93140"
 
 git clone -q git://github.com/F1ash/${GIT_NAME}.git
 
