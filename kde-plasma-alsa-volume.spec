@@ -1,16 +1,15 @@
 Name: kde-plasma-alsa-volume
-Version: 0.38.2
-Release: 5%{?dist}.R
+Version: 0.41.2
+Release: 1%{?dist}
 Summary: ALSA Volume Control plasmoid.
 Summary(ru): Плазмоид для управления ALSA устройствами.
 Group: Applications/Multimedia
-License: GPL
+License: GPLv2+
 Source0: http://cloud.github.com/downloads/F1ash/plasmaVolume/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 URL: https://github.com/F1ash/plasmaVolume
 BuildArch: noarch
 
-Requires: python, PyQt4, PyKDE4, python-alsaaudio
+Requires: PyKDE4, python-alsaaudio
 
 %description
 kde-plasma-alsa-volume
@@ -34,20 +33,19 @@ make install DESTDIR=$RPM_BUILD_ROOT/usr
 %{_datadir}/kde4/services/%{name}.desktop
 %{_datadir}/kde4/apps/plasma/plasmoids/%{name}/*
 %dir %{_datadir}/kde4/apps/plasma/plasmoids/%{name}
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+%doc README COPYING
 
 %changelog
+
+* Wed Dec 06 2012 Fl@sh <kaperang07@gmail.com> - 0.41.2-1
+- version update
+- added docs-files
 
 * Thu Sep 29 2011 Fl@sh <kaperang07@gmail.com> - 0.38.2-5
 - selected stable method of wait thread run
 
 * Tue Sep 27 2011 Fl@sh <kaperang07@gmail.com> - 0.38.1-5
 - added python-alsaaudio requires in spec
-
-* Tue Aug 30 2011 Fl@sh <kaperang07@gmail.com> - 0.38.1-4
-- added get source script
 
 * Mon Aug 29 2011 Fl@sh <kaperang07@gmail.com> - 0.38.1-3
 - fixed Makefile
